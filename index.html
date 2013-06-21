@@ -7,10 +7,23 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <style type="text/css" media="screen">
+      #main_content, header h1 {
+          text-align: center;
+      }
+
+header h3 {
+  letter-spacing: -1px;
+  font-size: 18px;
+  color: #aaa;
+  font-weight: normal;
+  line-height: 1.3;
+}
+    </style>
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>NECSTCloud by necst</title>
+    <title>NECSTCloud</title>
   </head>
 
   <body>
@@ -19,52 +32,110 @@
 
         <header>
           <h1>NECSTCloud</h1>
-          <h2>Website of the NECSTCloud</h2>
+
+          <img src="images/cloud/presentation/1.png" alt="" />
+
+          <p>The NECSTCloud is a project born within
+          the <a href="http://necst.it">NECST Laboratory</a> (Novel,
+          Emerging Computing System Technologies Laboratory)
+          at <a href="http://polimi.it">Politecnico di
+          Milano</a>. </p>
+
+          <h2>Aim</h2>
+
+          <p>The project aims at creating a low-cost, scalable cloud
+          infrastructure for handling the increasing demand of
+          computing power for research purposes.</p>
+
+          <h2>People</h2>
+
+          <p>The project started in late 2012 and a first working
+          deployment came to live in 2013 thanks to the great efforts
+          of master students, young researchers, and professors of
+          the <a href="http://necst.it">NECSTLab</a>.</p>
+
+          <h2>Features</h2>
+          <p>The NECSTCloud infrastructure is based on
+          the <a href="http://www.linux-kvm.org/">Linux QEMU/KVM</a>
+          hypervisor, managed
+          through <a href="http://opennebula.org">OpenNebula
+          4.0</a>.</p>
+
+          <p>The cloud controller, which is the most critical
+          component of the infrastructure, is <strong>fully
+          redundant</strong>: the network stack, filesystem, services
+          and cloud controller are all configured in tranparent
+          failover mode, so that if any hardware or software component
+          fails, the cloud will continue working.</p>
+
+          <p>The NECSTCloud <strong>is green</strong>! Indeed, it
+          allows to recycle old, spare machines (which would be
+          otherwise disposed) to increase the <strong>backup storage
+          pool</strong>.  This is possible thanks
+          to <a href="http://gluster.org">GlusterFS</a>, a distributed
+          file system capable of scaling to several petabytes
+          (actually, 72 brontobytes!) and handling thousands of
+          clients.</p>
         </header>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/necst/cloud.github.io/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/necst/cloud.github.io/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/necst/cloud.github.io" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
-
-        <hr>
+        <hr />
 
         <section id="main_content">
-          <h3>
-<a name="the-necstcloud" class="anchor" href="#the-necstcloud"><span class="octicon octicon-link"></span></a>The NECSTCloud</h3>
+          <h2>Linux KVM and OpenNebula for Managing the VMs</h2>
+          <img src="images/cloud/presentation/4.png" alt="" />
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+          <hr />
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+          <h2>Redundant Cloud Controllers in Failover Setup</h2>
+          <img src="images/cloud/presentation/3.png" alt="" />
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+          <hr />
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+          <h2>Distributed GlusterFS for Overnight, Green Backup</h2>
+          <img src="images/cloud/presentation/2.png" alt="" />
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+          <hr />
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+          <h2>Screenshots</h2>
+          <h3>Dashboard</h3>
+          <img src="images/cloud/screenshots/1.png" alt="" />
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+          <hr />
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+          <h3>NoVNC (HTML5 VNC client)</h3>
+          <img src="images/cloud/screenshots/2.png" alt="" />
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+          <hr />
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+          <h3>Virtual Machines</h3>
+          <img src="images/cloud/screenshots/3.png" alt="" />
+
+          <hr />
+
+          <h3>Templates</h3>
+          <img src="images/cloud/screenshots/4.png" alt="" />
+
+          <hr />
+
+          <h3>Images</h3>
+          <img src="images/cloud/screenshots/5.png" alt="" />
+
+          <hr />
+
+          <h3>Hosts</h3>
+          <img src="images/cloud/screenshots/6.png" alt="" />
+
+          <hr />
+
+          <h3>OpenNebula Marketplace</h3>
+          <img src="images/cloud/screenshots/7.png" alt="" />
         </section>
 
         <footer>
-          NECSTCloud is maintained by <a href="https://github.com/necst">necst</a><br>
           This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
         </footer>
 
-        
+
       </div>
     </div>
   </body>
